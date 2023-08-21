@@ -12,15 +12,15 @@ public class Usuario {
     private String login;
     private String password;
     private byte estatus;
-    private LocalDate fecheRegistro;
+    private LocalDate fechaRegistro;
     private int top_aux;
-    private String confirmarPassword;
+    private String confirmPassword_aux;
     private Rol rol;
 
     public Usuario() {
     }
 
-    public Usuario(int id, int idRol, String nombre, String apellido, String login, String password, byte estatus, LocalDate fecheRegistro, int top_aux, String confirmarPassword, Rol rol) {
+    public Usuario(int id, int idRol, String nombre, String apellido, String login, String password, byte estatus, LocalDate fechaRegistro, int top_aux, String confirmPassword_aux, Rol rol) {
         this.id = id;
         this.idRol = idRol;
         this.nombre = nombre;
@@ -28,9 +28,9 @@ public class Usuario {
         this.login = login;
         this.password = password;
         this.estatus = estatus;
-        this.fecheRegistro = fecheRegistro;
+        this.fechaRegistro = fechaRegistro;
         this.top_aux = top_aux;
-        this.confirmarPassword = confirmarPassword;
+        this.confirmPassword_aux = confirmPassword_aux;
         this.rol = rol;
     }
 
@@ -90,12 +90,12 @@ public class Usuario {
         this.estatus = estatus;
     }
 
-    public LocalDate getFecheRegistro() {
-        return fecheRegistro;
+    public LocalDate getFechaRegistro() {
+        return fechaRegistro;
     }
 
-    public void setFecheRegistro(LocalDate fecheRegistro) {
-        this.fecheRegistro = fecheRegistro;
+    public void setFechaRegistro(LocalDate fecheRegistro) {
+        this.fechaRegistro = fecheRegistro;
     }
 
     public int getTop_aux() {
@@ -106,12 +106,12 @@ public class Usuario {
         this.top_aux = top_aux;
     }
 
-    public String getConfirmarPassword() {
-        return confirmarPassword;
+    public String getConfirmPassword_aux() {
+        return confirmPassword_aux;
     }
 
-    public void setConfirmarPassword(String confirmarPassword) {
-        this.confirmarPassword = confirmarPassword;
+    public void setConfirmPassword_aux(String confirmPassword) {
+        this.confirmPassword_aux = confirmPassword;
     }
 
     public Rol getRol() {
@@ -122,6 +122,9 @@ public class Usuario {
         this.rol = rol;
     }
    
-    
+    public class EstatusUsuario{
+        public static final byte ACTIVO =1;
+        public static final byte INACTIVO =2;
+    }
     
 }
